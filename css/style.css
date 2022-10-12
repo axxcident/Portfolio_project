@@ -37,12 +37,56 @@ ul {
   background: var(--bg-black-900);
   min-height: 100vh;
   display: block;
-  position: fixed;
-  left: 270px;
-  top: 0;
+  /* position: fixed;
+  left: 270px; */
+  padding: 0 30px;
+  /* top: 0;
   right: 0;
-  z-index: 0;
+  z-index: 0; */
   opacity: 1;
+}
+
+.main-content {
+  padding-left: 270px;
+}
+
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+/* Knsk inte funkar för att klassen heter btn-hire-me. dessutom är allt redn 16px */
+/* ändrade klassen till btn hire-me */
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  display: inline-block;
+  white-space: nowrap;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  /* scale: 1.05; */
 }
 
 /* aside */
@@ -81,9 +125,7 @@ ul {
 
 .aside .logo a span {
   font-family: 'Clicker script', cursive;
-  /* font-family: 40px; */
   font-size: 40px;
-  /* font-family är fel, han menar nog font-size */
 }
 
 .aside .logo a::before {
@@ -176,4 +218,80 @@ ul {
 
 .aside .nav li a i {
   margin-right: 15px;
+}
+
+/* Home */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--bg-text-900);
+}
+
+.home .home-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+h3.hello {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+/* Inte snyggt på mitt namn, hitta annan font */
+h3.hello span {
+  font-family: 'Clicker script', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--skin-color);
+}
+
+h3.my-profession {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.typing {
+  color: var(--skin-color);
+}
+
+.home-info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+
+.home .home-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  text-align: center;
+  position: relative;
+}
+
+.home .home-img::before {
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
+  left: 20px;
+  top: -40px;
+}
+
+.home .home-img::after {
+  content: '';
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
+  right: 20px;
+  bottom: -40px;
+}
+
+.home .home-img img {
+  margin: auto;
+  border-radius: 5px;
+  height: 400px;
 }
