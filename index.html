@@ -40,7 +40,7 @@
       <!--ändra div till main?-->
 
       <!-- Home Section start -->
-      <section class="home section hidden">
+      <section class="home section">
         <div class="container">
           <div class="row">
             <div class="home-info padd-15">
@@ -74,8 +74,9 @@
             <div class="about-content padd-15">
               <div class="row">
                 <!-- Knsk skippa padd-15 -->
+                <!-- Lägg till JS på Portfolio, så den winklar vid span:hover -->
                 <div class="about-text padd-15">
-                  <h3>I'm Ackman and this is my online interactive <span>Portfolio</span></h3>
+                  <h3>My name is Axel Olivecrona. Have a look at my interactive <span>Portfolio</span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est saepe quibusdam sunt ipsa quae nulla
                     quas harum unde cum, doloribus, delectus fuga rerum sequi voluptate. Quisquam reiciendis veniam
                     minus harum a laboriosam eaque aperiam fugit optio ad, explicabo ducimus maxime sunt pariatur
@@ -84,14 +85,175 @@
                 </div>
               </div>
               <div class="row">
-                <div class="personal-info">Info</div>
-                <div class="skills">Skills</div>
+                <div class="personal-info padd-15">
+                  <div class="row">
+                    <div class="info-item padd-15">
+                      <p>Birthday: <span>4 April</span></p>
+                    </div>
+                    <!-- använd JS Date() .getFullYear() -->
+                    <div class="info-item padd-15">
+                      <p>Age: <span>30</span></p>
+                    </div>
+                    <!-- Ta bort sen? Vad är syftet?-->
+                    <div class="info-item padd-15">
+                      <p>Website: <span>www.domain.com</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Email: <span>olivecrona.axel@gmail.com</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Discord: <span>mctastic#5156</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Front-End edu: <span>IT-högskolan</span></p>
+                    </div>
+                    <!-- <br> knsk inte funkar
+                    Använde <br><span style="position: absolute; left: 169px;">Economics</span> -->
+                    <div class="info-item padd-15">
+                      <p>Bachelors D: <span>Pol. Science & Econ.</span>
+                      </p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>City: <span>Stockholm</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="buttons padd-15">
+                      <a href="https://www.linkedin.com/in/axel-olivecrona-077b17b8/" class="btn">Download CV</a>
+                      <a href="#contact" class="btn hire-me">Hire Me</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills padd-15">
+                  <div class="row">
+                    <div class="skill-item padd-15">
+                      <h5>HTML</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 80%;"></div>
+                        <div class="skill-percent">80%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>CSS</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 50%;"></div>
+                        <div class="skill-percent">50%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>JS</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 45%;"></div>
+                        <div class="skill-percent">45%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>Bootstrap</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 25%;"></div>
+                        <div class="skill-percent">25%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="education padd-15">
+                  <h3 class="title">Education</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- === Timeline Item === -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">University Degree in Policial Science</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">University Degree in Economics</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">University Degree in Policial Science</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="experience padd-15">
+                  <h3 class="title">Experience</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- === Timeline Item === -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">Klarna Bank AB</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">Willys</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2005 - 2015
+                          </h3>
+                          <h4 class="timeline-title">Ministry of Enterprise & Innovation</h4>
+                          <p class="timeline-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque dolor repellendus
+                            nostrum id ex alias voluptate debitis sed est at odio aperiam velit, consectetur iure hic.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- About Section end -->
+
+      <!-- Services Section Start -->
+
+      <!-- Services Section end -->
 
     </div>
     <!-- Main Content end -->
