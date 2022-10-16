@@ -616,3 +616,51 @@ h3.my-profession {
   color: var(--text-black-700);
   line-height: 25px;
 }
+
+
+/* Portfolio */
+
+.portfolio .container {
+  padding-bottom: 40px;
+}
+
+.portfolio .portfolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.portfolio .portfolio-heading h2 {
+  font-weight: 500;
+  color: var(--text-black-900);
+}
+
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+/* Måste nog css-fixa bilderna,
+    html element IMG-height/width är ej med video
+    Första nedan, min lösning:
+    */
+
+/* .portfolio .portfolio-item .portfolio-item-inner .portfolio-img {
+  background: var(--bg-black-900) fixed center center;
+  background-size: cover;
+} */
+
+/* Ta bort img element och CSS:a fram bild. lägg storlek på portfolio-img  */
+
+.portfolio .portfolio-item .portfolio-item-inner {
+  border: 1px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item .portfolio-item-inner .portfolio-img img {
+  width: 100%;
+  display: block;
+}
