@@ -758,3 +758,68 @@ h3.my-profession {
   height: 50px;
   padding: 0 50px;
 }
+
+
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+
+  .main-content {
+    padding-left: 0;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .home .home-img {
+    display: none;
+  }
+
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact .contact-info-item,
+  .service .service-item,
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width:801px) {
+
+  .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* min egen choice */
+@media (max-width:767px) {
+
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* info item Email
+body > div > div.main-content > section.about.section > div > div:nth-child(2) > div > div:nth-child(2) > div.personal-info.padd-15 > div:nth-child(1) > div:nth-child(4) > p > span
+
+  Gör så att Iphone SE inte fungerar. skärmen blir bredare
+  än nödvändigt. Flytta denna till vänster kolumn
+  eller gör radbryt på email.
+*/
