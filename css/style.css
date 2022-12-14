@@ -15,6 +15,14 @@ body {
   font-size: 16px;
 }
 
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -284,6 +292,7 @@ ul {
 h3.hello {
   font-size: 28px;
   margin: 15px 0;
+  color: var(--text-black-900);
 }
 
 /* Inte snyggt på mitt namn, hitta annan font */
@@ -297,6 +306,7 @@ h3.hello span {
 h3.my-profession {
   font-size: 30px;
   margin: 15px 0;
+  color: var(--text-black-900);
 }
 
 .typing {
