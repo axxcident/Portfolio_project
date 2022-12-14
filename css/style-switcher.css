@@ -12,7 +12,11 @@
   transform: translateX(100%);
 }
 
-.style-switcher .open {
+/* .style-switcher .open {         Funkar ej som han gör så har gjort .open nedan istället.
+  transform: translateX(-25px);
+} */
+
+.open {
   transform: translateX(-25px);
 }
 
