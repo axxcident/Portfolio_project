@@ -55,9 +55,9 @@ ul {
 }
 
 /* Kom tillbala hit */
-.hidden {
+/* .hidden {
   display: none !important;
-}
+} */
 
 .main-content {
   padding-left: 270px;
@@ -824,6 +824,11 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+
+#focus {
+  color: var(--skin-color);
 }
 
 /* info item Email
