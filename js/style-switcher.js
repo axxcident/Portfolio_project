@@ -55,81 +55,93 @@ window.addEventListener("load", () => {
 
 
 
+/*   <!-- ============= Change aside section colorfocus ============= --> */
 
-/*   <!-- ============= Change aside bar color ============= --> */
-/* Aside buttons */
-const knapp_hemmet = document.getElementById("hem");
-const knapp_ommig = document.getElementById("omhem");
-const knapp_servitriser = document.getElementById("servhem");
-const knapp_portfo = document.getElementById("porthem");
-const knapp_kontakt = document.getElementById("konthem");
-// body > div.main - container > div.aside > ul > li: nth - child(1) > a
-/* Sections */
-const hemmet = document.getElementById("home");
-const ommig = document.getElementById("about");
-const servitriser = document.getElementById("services");
-const portfo = document.getElementById("portfolio");
-const kontakt = document.getElementById("contact");
+/* QuerySelect all Aside nav meny buttons */
+const hemidan = document.getElementById("hem");
+const aboutsidan = document.getElementById("omhem");
+const servsidan = document.getElementById("servhem");
+const portsidan = document.getElementById("porthem");
+const kontsidan = document.getElementById("konthem");
 
-console.log(knapp_ommig)
-console.log(typeof knapp_ommig)
-console.log(knapp_kontakt)
+/* Sections offsetHeight */
+const allSections = document.querySelectorAll('section[id]');
+console.log(allSections)
+allSections.forEach(höjd => {
+  console.log(höjd.offsetHeight)
+  // console.log(höjd.offsetTop) // toppen på varje sectionBox
+})
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.pageYOffset;
+  if (scrollY < 916) {
+    allSections.forEach(grej => {
+      if (grej.getAttribute("id") == "home") {
+        hemidan.classList.add("focus");
+        aboutsidan.classList.remove("focus");
+        servsidan.classList.remove("focus");
+        portsidan.classList.remove("focus");
+        kontsidan.classList.remove("focus");
+      }
+    })
+    // console.log("nu är vi hemma");
+  }
+  if (scrollY > 916 && scrollY < 2438) {
+    allSections.forEach(grej => {
+      if (grej.getAttribute("id") == "about") {
+        hemidan.classList.remove("focus");
+        aboutsidan.classList.add("focus");
+        servsidan.classList.remove("focus");
+        portsidan.classList.remove("focus");
+        kontsidan.classList.remove("focus");
+      }
+    })
+    // console.log("nu är vi about")
+  }
+  if (scrollY > 2438 && scrollY < 3354) {
+    allSections.forEach(grej => {
+      if (grej.getAttribute("id") == "services") {
+        hemidan.classList.remove("focus");
+        aboutsidan.classList.remove("focus");
+        servsidan.classList.add("focus");
+        portsidan.classList.remove("focus");
+        kontsidan.classList.remove("focus");
+      }
+    })
+    // console.log("nu är vi services")
+  }
+  if (scrollY > 3354 && scrollY < 4270) {
+    allSections.forEach(grej => {
+      if (grej.getAttribute("id") == "portfolio") {
+        hemidan.classList.remove("focus");
+        aboutsidan.classList.remove("focus");
+        servsidan.classList.remove("focus");
+        portsidan.classList.add("focus");
+        kontsidan.classList.remove("focus");
+      }
+    })
+    // console.log("nu är vi portfolio")
+  }
+  if (scrollY > 4270 && scrollY < 5186) {
+    allSections.forEach(grej => {
+      if (grej.getAttribute("id") == "contact") {
+        hemidan.classList.remove("focus");
+        aboutsidan.classList.remove("focus");
+        servsidan.classList.remove("focus");
+        portsidan.classList.remove("focus");
+        kontsidan.classList.add("focus");
+      }
+    })
+    // console.log("nu är vi contact")
+  }
+})
+
+// const scrollY = window.pageYOffset; // vart vi är
+
+
+
 
 // Kolla denna https://www.youtube.com/watch?v=9HZX9orlZNc
 // window.screenY
 // vad varje id har för position på sidan. Använd offset high.
 // foreach loop som tar tar fram offset high. höjd förhållande toppen sidan.
-
-
-// /* When hovering mouse over section */
-// while (hemmet.addEventListener("mouseover", () => {
-
-// }))
-//   hemmet.addEventListener("mouseover", () => {
-//     knapp_ommig.classList.
-// })
-
-// knapp_ommig.classList.add().style.color = "red"; */
-
-/* ommig.addEventListener("mouseover", event => {
-  if (event == true) {
-    console.log("about")
-  }
-  else {
-    console.log("something?")
-    console.log(event);
-  }
-}) */
-
-/* if (hemmet.addEventListener("mouseover", event => {
-})) {
-  console.log("hemnet")
-} */
-
-
-/* if (ommig.addEventListener("mouseover", event == true)) {
-  // knapp_ommig.classList.add(".focus");
-  console.log("about")
-}
-
-if (servitriser.addEventListener("mouseover", event == true)) {
-  // knapp_servitriser.classList.add(".focus");
-  console.log("services")
-}
-
-if (portfo.addEventListener("mouseover", event == true)) {
-  knapp_portfo.classList.add(".focus");
-}
-
-if (kontakt.addEventListener("mouseover", event == true)) {
-  knapp_kontakt.classList.add(".focus");
-} */
-
-/* else {
-  knapp_kontakt.classList.remove(".focus");
-} */
-
-
-/* ommig.addEventListener("mouseover", () => {
-  knapp_ommig.classList.toggle("active");
-}) */

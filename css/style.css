@@ -217,7 +217,6 @@ ul {
   border-radius: 5px;
   background: var(--bg-black-100);
   display: none;
-  /* DISPLAY:flex Kommer nog återkomma till */
   justify-content: center;
   align-items: center;
 }
@@ -268,9 +267,10 @@ ul {
   padding: 5px 15px;
 }
 
-.aside .nav li a.active {
+/* ta bort active klassen? */
+/* .aside .nav li a.active {
   color: var(--skin-color);
-}
+} */
 
 .aside .nav li a i {
   margin-right: 15px;
@@ -827,8 +827,8 @@ h3.my-profession {
 }
 
 
-#focus {
-  color: var(--skin-color);
+.focus {
+  color: var(--skin-color) !important;
 }
 
 /* info item Email
