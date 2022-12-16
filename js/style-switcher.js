@@ -37,7 +37,7 @@ function setActiveStyle(color) {
   });
 };
 
-/*   <!-- ============= Light / Dark mode ============= --> */
+/*  <!-- ============= Light / Dark mode ============= --> */
 const dayNight = document.querySelector(".day-night");
 dayNight.addEventListener("click", () => {
   dayNight.querySelector("i").classList.toggle("fa-sun");
@@ -52,6 +52,9 @@ window.addEventListener("load", () => {
     dayNight.querySelector("i").classList.add("fa-moon");
   }
 })
+
+
+
 
 /*   <!-- ============= Change aside bar color ============= --> */
 /* Aside buttons */
@@ -72,14 +75,21 @@ console.log(knapp_ommig)
 console.log(typeof knapp_ommig)
 console.log(knapp_kontakt)
 
+// Kolla denna https://www.youtube.com/watch?v=9HZX9orlZNc
+// window.screenY
+// vad varje id har för position på sidan. Använd offset high.
+// foreach loop som tar tar fram offset high. höjd förhållande toppen sidan.
 
-/* When hovering mouse over section */
 
-hemmet.addEventListener("mouseover", () => {
-  console.log("hemnet")
-})
+// /* When hovering mouse over section */
+// while (hemmet.addEventListener("mouseover", () => {
 
-knapp_ommig.classList.add().style.color = "red";
+// }))
+//   hemmet.addEventListener("mouseover", () => {
+//     knapp_ommig.classList.
+// })
+
+// knapp_ommig.classList.add().style.color = "red"; */
 
 /* ommig.addEventListener("mouseover", event => {
   if (event == true) {
