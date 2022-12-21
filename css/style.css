@@ -673,6 +673,7 @@ h3.my-profession {
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img img {
   width: 100%;
   display: block;
+  background-size: cover;
 }
 
 
