@@ -57,84 +57,112 @@ window.addEventListener("load", () => {
 
 /*   <!-- ============= Change aside section colorfocus ============= --> */
 
-/* QuerySelect all Aside nav meny buttons */
-const hemidan = document.getElementById("hem");
-const aboutsidan = document.getElementById("omhem");
-const servsidan = document.getElementById("servhem");
-const portsidan = document.getElementById("porthem");
-const kontsidan = document.getElementById("konthem");
+const menuItems = document.querySelectorAll('.nav li a');
+const sections = document.querySelectorAll('.section');
 
-/* Sections offsetHeight */
-const allSections = document.querySelectorAll('section[id]');
-console.log(allSections)
-allSections.forEach(höjd => {
-  console.log(höjd.offsetHeight)
-  // console.log(höjd.offsetTop) // toppen på varje sectionBox
-})
+function changeColor() {
+  // Get current scroll position
+  const scrollPos = window.scrollY;
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.pageYOffset;
-  if (scrollY < 916) {
-    allSections.forEach(grej => {
-      if (grej.getAttribute("id") == "home") {
-        hemidan.classList.add("focus");
-        aboutsidan.classList.remove("focus");
-        servsidan.classList.remove("focus");
-        portsidan.classList.remove("focus");
-        kontsidan.classList.remove("focus");
-      }
-    })
-    // console.log("nu är vi hemma");
+  // Loop through sections and menu items
+  for (let i = 0; i < sections.length; i++) {
+    const section = sections[i];
+    const menuItem = menuItems[i];
+
+    // If scroll position is within current section
+    if (scrollPos >= section.offsetTop - 50 && scrollPos < section.offsetTop + section.offsetHeight - 50) {
+      // Change color of menu item to red
+      menuItem.classList.add("focus");
+    } else {
+      // Change color of menu item back to black
+      menuItem.classList.remove("focus");
+    }
   }
-  if (scrollY > 916 && scrollY < 2438) {
-    allSections.forEach(grej => {
-      if (grej.getAttribute("id") == "about") {
-        hemidan.classList.remove("focus");
-        aboutsidan.classList.add("focus");
-        servsidan.classList.remove("focus");
-        portsidan.classList.remove("focus");
-        kontsidan.classList.remove("focus");
-      }
-    })
-    // console.log("nu är vi about")
-  }
-  if (scrollY > 2438 && scrollY < 3354) {
-    allSections.forEach(grej => {
-      if (grej.getAttribute("id") == "services") {
-        hemidan.classList.remove("focus");
-        aboutsidan.classList.remove("focus");
-        servsidan.classList.add("focus");
-        portsidan.classList.remove("focus");
-        kontsidan.classList.remove("focus");
-      }
-    })
-    // console.log("nu är vi services")
-  }
-  if (scrollY > 3354 && scrollY < 4270) {
-    allSections.forEach(grej => {
-      if (grej.getAttribute("id") == "portfolio") {
-        hemidan.classList.remove("focus");
-        aboutsidan.classList.remove("focus");
-        servsidan.classList.remove("focus");
-        portsidan.classList.add("focus");
-        kontsidan.classList.remove("focus");
-      }
-    })
-    // console.log("nu är vi portfolio")
-  }
-  if (scrollY > 4270 && scrollY < 5186) {
-    allSections.forEach(grej => {
-      if (grej.getAttribute("id") == "contact") {
-        hemidan.classList.remove("focus");
-        aboutsidan.classList.remove("focus");
-        servsidan.classList.remove("focus");
-        portsidan.classList.remove("focus");
-        kontsidan.classList.add("focus");
-      }
-    })
-    // console.log("nu är vi contact")
-  }
-})
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', changeColor);
+
+
+
+// /* QuerySelect all Aside nav meny buttons */
+// const hemidan = document.getElementById("hem");
+// const aboutsidan = document.getElementById("omhem");
+// const servsidan = document.getElementById("servhem");
+// const portsidan = document.getElementById("porthem");
+// const kontsidan = document.getElementById("konthem");
+
+// /* Sections offsetHeight */
+// const allSections = document.querySelectorAll('section[id]');
+// console.log(allSections)
+// allSections.forEach(höjd => {
+//   console.log(höjd.offsetHeight)
+//   // console.log(höjd.offsetTop) // toppen på varje sectionBox
+// })
+
+// window.addEventListener("scroll", () => {
+//   const scrollY = window.pageYOffset;
+//   if (scrollY < 916) {
+//     allSections.forEach(grej => {
+//       if (grej.getAttribute("id") == "home") {
+//         hemidan.classList.add("focus");
+//         aboutsidan.classList.remove("focus");
+//         servsidan.classList.remove("focus");
+//         portsidan.classList.remove("focus");
+//         kontsidan.classList.remove("focus");
+//       }
+//     })
+//     // console.log("nu är vi hemma");
+//   }
+//   if (scrollY > 916 && scrollY < 2438) {
+//     allSections.forEach(grej => {
+//       if (grej.getAttribute("id") == "about") {
+//         hemidan.classList.remove("focus");
+//         aboutsidan.classList.add("focus");
+//         servsidan.classList.remove("focus");
+//         portsidan.classList.remove("focus");
+//         kontsidan.classList.remove("focus");
+//       }
+//     })
+//     // console.log("nu är vi about")
+//   }
+//   if (scrollY > 2438 && scrollY < 3354) {
+//     allSections.forEach(grej => {
+//       if (grej.getAttribute("id") == "services") {
+//         hemidan.classList.remove("focus");
+//         aboutsidan.classList.remove("focus");
+//         servsidan.classList.add("focus");
+//         portsidan.classList.remove("focus");
+//         kontsidan.classList.remove("focus");
+//       }
+//     })
+//     // console.log("nu är vi services")
+//   }
+//   if (scrollY > 3354 && scrollY < 4270) {
+//     allSections.forEach(grej => {
+//       if (grej.getAttribute("id") == "portfolio") {
+//         hemidan.classList.remove("focus");
+//         aboutsidan.classList.remove("focus");
+//         servsidan.classList.remove("focus");
+//         portsidan.classList.add("focus");
+//         kontsidan.classList.remove("focus");
+//       }
+//     })
+//     // console.log("nu är vi portfolio")
+//   }
+//   if (scrollY > 4270 && scrollY < 5186) {
+//     allSections.forEach(grej => {
+//       if (grej.getAttribute("id") == "contact") {
+//         hemidan.classList.remove("focus");
+//         aboutsidan.classList.remove("focus");
+//         servsidan.classList.remove("focus");
+//         portsidan.classList.remove("focus");
+//         kontsidan.classList.add("focus");
+//       }
+//     })
+//     // console.log("nu är vi contact")
+//   }
+// })
 
 // const scrollY = window.pageYOffset; // vart vi är
 
