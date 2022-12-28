@@ -12,11 +12,11 @@
   transform: translateX(100%);
 }
 
-/* .style-switcher .open {         Funkar ej som han gör så har gjort .open nedan istället.
+/* body>div.main-container>div.aside.open {
   transform: translateX(-25px);
 } */
 
-.open {
+body>div.style-switcher.openColorMeny {
   transform: translateX(-25px);
 }
 

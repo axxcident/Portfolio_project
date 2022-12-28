@@ -796,14 +796,20 @@ h3.my-profession {
   padding: 0 50px;
 }
 
-/* vrf behöver jag important på dessa 2 under? */
-
-.open {
+/* .open {
   left: 0 !important;
+} */
+
+/* .openBTN {
+  left: 300px !important;
+} */
+
+body>div.main-container>div.aside.open {
+  left: 0;
 }
 
-.openBTN {
-  left: 300px !important;
+body>div.main-container>div.aside.open>div.nav-toggler.openBTN {
+  left: 300px;
 }
 
 

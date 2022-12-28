@@ -2,8 +2,12 @@
 
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 
+// styleSwitcherToggle.addEventListener("click", () => {
+//   document.querySelector(".style-switcher").classList.toggle("open");
+// }); innan förändring
+
 styleSwitcherToggle.addEventListener("click", () => {
-  document.querySelector(".style-switcher").classList.toggle("open");
+  document.querySelector(".style-switcher").classList.toggle("openColorMeny");
 });
 
 
@@ -16,9 +20,12 @@ addEventListener("scroll", () => {
   // stiländraren.classList.style = "position = absolute";
 });
  */
+
+// tidigare .open ändrar nu till .openColorMeny
+
 window.addEventListener("scroll", () => {
-  if (document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").classList.remove("open");
+  if (document.querySelector(".style-switcher").classList.contains("openColorMeny")) {
+    document.querySelector(".style-switcher").classList.remove("openColorMeny");
   }
 })
 /*   <!-- ============= Theme Switcher ============= --> */
