@@ -84,6 +84,14 @@
 // const scrollY = window.pageYOffset; // vart vi är
 
 
+// Mitt fungerande* försök innan video:
+/* stiländraren = document.querySelector(".style-switcher");
+addEventListener("scroll", () => {
+  stiländraren.style.position = "absolute";
+  // stiländraren.classList.style = "position = absolute";
+});
+ */
+
 
 
 // Kolla denna https://www.youtube.com/watch?v=9HZX9orlZNc

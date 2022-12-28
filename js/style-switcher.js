@@ -2,26 +2,16 @@
 
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 
-// styleSwitcherToggle.addEventListener("click", () => {
-//   document.querySelector(".style-switcher").classList.toggle("open");
-// }); innan förändring
-
 styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("openColorMeny");
 });
 
+styleSwitcherToggle.addEventListener("mouseover", () => {
+  document.querySelector("div.style-switcher-toggler.s-icon > i").classList.toggle("fa-spin");
+})
 
+// tidigare .open ändrar nu till .openColorMeny. Funkar grejt.
 /* Hide style switcher on scroll */
-
-// Mitt fungerande* försök innan video:
-/* stiländraren = document.querySelector(".style-switcher");
-addEventListener("scroll", () => {
-  stiländraren.style.position = "absolute";
-  // stiländraren.classList.style = "position = absolute";
-});
- */
-
-// tidigare .open ändrar nu till .openColorMeny
 
 window.addEventListener("scroll", () => {
   if (document.querySelector(".style-switcher").classList.contains("openColorMeny")) {
@@ -59,8 +49,6 @@ window.addEventListener("load", () => {
     dayNight.querySelector("i").classList.add("fa-moon");
   }
 })
-
-
 
 /*   <!-- ============= Change aside section colorfocus ============= --> */
 
