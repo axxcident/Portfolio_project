@@ -6,9 +6,14 @@ styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("openColorMeny");
 });
 
-styleSwitcherToggle.addEventListener("mouseover", () => {
-  document.querySelector("div.style-switcher-toggler.s-icon > i").classList.toggle("fa-spin");
-})
+// Kod som gör att menu-kugghjul rullar.
+// styleSwitcherToggle.addEventListener("mouseover", () => {
+//   document.querySelector("div.style-switcher-toggler.s-icon > i").classList.add("fa-spin");
+// })
+
+// styleSwitcherToggle.addEventListener("mouseleave", () => {
+//   document.querySelector("div.style-switcher-toggler.s-icon > i").classList.remove("fa-spin");
+// })
 
 // tidigare .open ändrar nu till .openColorMeny. Funkar grejt.
 /* Hide style switcher on scroll */
