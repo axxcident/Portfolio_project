@@ -32,3 +32,23 @@ for (let i = 0; i < totalNavList; i++) {
     navTogglerBTN.classList.toggle("openBTN");
   })
 }
+
+// Smooth section change.
+const menuAsideItems = document.querySelectorAll('.nav li a');
+
+menuAsideItems.forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault(); // prevent the default action of the link (instant scrolling)
+
+    // find the corresponding section
+    const targetId = event.target.getAttribute('href');
+
+    const targetElement = document.querySelector(targetId);
+
+    // smooth scroll to the section
+    targetElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
