@@ -52,3 +52,37 @@ menuAsideItems.forEach(link => {
     });
   });
 });
+
+// Smooth section change by Button
+const startBTN = document.getElementById("startBTN");
+const targetAbout = document.getElementById("about");
+
+startBTN.addEventListener("click", event => {
+  event.preventDefault();
+  targetAbout.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+const contactBTN = document.getElementById("contactBTN");
+const targetContact = document.getElementById("contact");
+
+contactBTN.addEventListener("click", event => {
+  event.preventDefault();
+  targetContact.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+
+const logoBTN = document.getElementById("logoBTN");
+const targetHome = document.getElementById("home");
+
+logoBTN.addEventListener("click", event => {
+  event.preventDefault();
+  targetHome.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});

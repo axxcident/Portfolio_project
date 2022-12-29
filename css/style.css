@@ -121,8 +121,6 @@ ul {
   position: relative;
 }
 
-/* Knsk inte funkar för att klassen heter btn-hire-me. dessutom är allt redn 16px */
-/* ändrade klassen till btn hire-me */
 .btn {
   font-size: 16px;
   font-weight: 500;
