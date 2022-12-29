@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
   --bg-black-900: #f2f2fc;
@@ -319,11 +325,22 @@ h3.hello {
   color: var(--text-black-900);
 }
 
-/* Inte snyggt på mitt namn, hitta annan font */
+/*
+  Med font-family: 'Anton', 'sans-serif'; och font-size: 230px
+  så blir det en gnsk snygg header/hero image som man möts av.
+  Texten funkar dock ej responsivt. Måste använda clip() dock tror jag.
+
+  Lobster är nog vinnaren.
+
+  Alternativ till Lobster är
+  font-family: 'Righteous', cursive; font-weight: 400; ej italic.
+
+*/
 h3.hello span {
-  font-family: 'Clicker script', cursive;
+  font-family: 'Lobster', cursive;
+  /* font-style: italic; */
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--skin-color);
 }
 
@@ -371,6 +388,8 @@ h3.my-profession {
   right: 20px;
   bottom: -40px;
 }
+
+/* Om stor text. bottom: 605px */
 
 .home .home-img img {
   margin: auto;
